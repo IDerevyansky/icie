@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>icie</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="design/uikit/css/uikit.min.css"/>
+		    <link rel="stylesheet" href="design/css/style.css"/>
+        <script src="design/uikit/js/uikit.min.js"></script>
+        <script src="design/uikit/js/uikit-icons.min.js"></script>
+        <script src="design/js/jquery-3.4.1.min.js"></script>
+        <script src="design/js/main.js"></script>
+        <script type="text/javascript">var curPage = ''</script>
+    </head>
+    <body>
+
+<div id="main"></div>
+<menu  class="menu_box" >
+  <div class="content_box">
+
+    <div class="logo_box">
+		<a href="index.html">
+			<img src="design\img\icie_logo.png" class="img_logo">
+		</a>
+    </div>
+
+    <div class="text_logo">
+      <p style="font-size:22px; line-height: 1.1;">Интер<span style="font-weight: 500;">ЭВМ</span></br><p style="line-height: 0.8;"><span style="font-size:13px;">Международный центр </br>по информатике и электронике</span></p></p>
+    </div>
+    <div class="menu_item mt-20">
+		
+		<div>
+			<a style="font-size:12px;" href="about/contacts.html">
+        <img width="20" style="margin-top:-5px; margin-right:6px;" src="design\img\icon_location.png">Москва, Пресненский Вал, 19
+      </a>
+			<!-- <img width="25" src="design\img\menu_more.png"> -->
+		</div>
+    </div>
+
+  </div>
+</menu>
+
+
+<menu uk-sticky class="menu_box_nav" >
+  <div class="content_box_duble_menu">
+  
+  <div class="more_box">
+		<div class="more_menu">
+      <a href="index.html">
+			<img width="60" src="design\img\icie_logo.png">
+      </a>
+		</div>
+  </div>
+  
+
+    <div class="menu_item">
+
+        <!-- <ul>
+          <li class="select_item item_js" onmouseover="switchSubMenu('')"><a href="../index.html">Главная</a></li>
+          <li class="select_item item_js" onmouseover="switchSubMenu('about')"><a uk-scroll="offset: 80;" href="#about">О компании</a></li>
+          <li class="select_item item_js" onmouseover="switchSubMenu('lic')"><a uk-scroll="offset: 80;" href="#license" >Лицензии и сертификаты</a></li>
+          <li class="select_item item_js" onmouseover="switchSubMenu('service')"><a uk-scroll="offset: 80;" href="#service">Услуги и решения</a></li>
+          <li class="select_item item_js" onmouseover="switchSubMenu('press')"><a uk-scroll="offset: 20;" href="#news">Пресс-центр</a></li>
+        </ul> -->
+
+        <ul>
+          <li class="select_item select_js" ><a href="index.html">Главная</a></li>
+          <li class="select_item select_js" ><a uk-scroll="offset: 80;" href="#about">О компании</a></li>
+          <li class="select_item select_js" ><a uk-scroll="offset: 80;" href="#license" >Лицензии и сертификаты</a></li>
+          <li class="select_item select_js" ><a uk-scroll="offset: 80;" href="#service">Услуги и решения</a></li>
+          <li class="select_item select_js" ><a uk-scroll="offset: 20;" href="#news">Пресс-центр</a></li>
+        </ul>
+
+    </div>
+
+  </div>
+</menu>
+
+
+
+<div class="pop_app_menu_box">
+
+  <div class="pop_app_menu">
+    
+    <div class="duble_menu">
+
+    <ul class="item_js" style="width:220px;" >
+      <!-- <li style="font-weight: 500;"><a href="#">О компании</a></li> -->
+      <li><a href="about/history.html">История создания</a></li>
+      <li><a href="about/index.html">Направления деятельности</a></li>
+      <li><a href="about/leadership.html">Руководство</a></li>
+      <li><a href="about/science.html">Научно-педагогическая деятельность</a></li>
+      <li><a href="about/activity.html">Учредительные и внутренние документы</a></li>
+      <li><a href="about/contacts.html">Контакты</a></li>
+    </ul>
+
+    <ul class="padding-left item_js">
+   <!-- <li style="font-weight: 500;"><a href="#">Лицензии</a></li> -->
+      <!-- <li><a href="../licenses/index.html">Лицензии</br> и сертификаты</a></li> -->
+    <li><a href="licenses/index_2.html">Лицензии и сертификаты</a></li>
+      <li><a href="licenses/accred.html">Аккредитация</a></li>
+    </ul>
+
+    <ul class="padding-left item_js" style="width:220px;">
+      <!-- <li style="font-weight: 500;"><a href="#">Услуги и решения</a></li> -->
+      <li><a href="services/index.html">Информационные карточки диссертаций (ИКД)</a></li>
+      <li><a href="services/lab.html">Испытательная лаборатория</a></li>
+    </ul>
+
+    <ul class="padding-left item_js">
+      <!-- <li style="font-weight: 500;"><a href="#">Пресс-центр</a></li> -->
+      <li><a href="press-center/index.html">Новости</a></li>
+      <li><a href="press-center/events.html">События</a></li>
+    </ul>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+<div class="content mt-0" id="content"> 
+
+  <div class="slider_main">
+  
+	<div class="cont_btn" >
+
+       <div class="left_btn" id="leftBtn"></div>
+       <div class="right_btn" id="rightBtn"></div>                
+    </div>
+  
+    <!-- <img width="930"src="design\img\slider.png"> -->
+  <div class="preloaderLine"></div>  
+	<div class="item_slide">
+	<div class="slide_main_content">
+	<h2 class="q">Испытательная  лаборатория</h2>
+	<p class="q line-height">
+	Испытательная лаборатория проводит сертификационные 
+	испытания и тематические исследования программных 
+	изделий общего и специального назначения, оценку 
+	информационных систем, аттестационные испытания 
+	систем специального назначения.  
+	</p>
+	<div class="btnMore"><a href="services/lab.html"><img class="effect" width="78" src='design\img\btn_more.png'></a></div>
+	</div>
+	<img width="930"src="design\img\slide_4.jpg">
+	</div>
+
+	<div class="item_slide">
+	<div class="slide_main_content">
+	<h2 class="q">Международная деятельность</h2>
+	<p class="q line-height">
+	Международный центр по информатике и электронике ИнтерЭВМ 
+	является базовой организацией Национального Комитета 
+	содействия экономическому сотрудничеству со странами 
+	Латинской Америки (НК СЭСЛА). Президентом НК СЭСЛА является 
+	Генеральный директор ИнтерЭВМ Старовойтов А.В. 
+	</p>
+	<div class="btnMore"><a href="about/index.html#down"><img class="effect" width="78" src='design\img\btn_more.png'></a></div>
+	</div>
+	<img width="930"src="design\img\slide_5.jpg">
+	</div>
+
+  <div class="item_slide">
+  <div class="slide_main_content">
+  <h2 class="q">Направления деятельности</h2>
+  <p class="q line-height">
+  Разработка, сопровождение, модернизация и развитие 
+  автоматизированных систем организационного управления 
+  для органов государственной власти, организаций 
+  и предприятий на основе использования перспективных 
+  информационных технологий.
+  </p>
+  <div class="btnMore"><a href="about/index.html"><img class="effect" width="78" src='design\img\btn_more.png'></a></div>
+  </div>
+  <img width="930"src="design\img\slide_5_5.jpg">
+  </div>
+	
+  </div>
+
+    <div id="about" class="title_item">
+
+      <div style="float:left;">
+      <h2>О компании</h2>
+      </div>
+
+      <div style="float:right;">
+      <a href="about/index.html"><span style="color:#23B2E7;">Подробнее</span></a>
+      </div>
+
+    </div>
+
+		<a href="about/index.html">
+      <div class="left_box effect">
+          <div class="bg_img"></div>
+          <div class="discr"><p>
+            Разработка, сопровождение, модернизация и развитие автоматизированных
+            систем организационного управления для органов государственной власти.
+            </p></div>
+      </div>
+		</a>
+    
+		<a  href="about/index.html#down"> 
+		<div class="right_box effect">
+			<div class="bg_img"></div>
+			<div class="discr"><p>
+          Международная деятельность</br>
+		  Страны основатели ИнтерЭВМ: </br>
+		  Россия,
+		  Куба,
+		  Венгерия, 
+		  Болгария,
+		  ФРГ,
+		  Словакия 
+			</p></div>
+		</div>
+		</a>
+
+      <div id="license" class="title_item">
+
+        <div style="float:left;">
+        <h2>Лицензии и сертификаты</h2>
+        </div>
+
+      </div>
+
+      <div class="license_slider effect">
+        <div class="text_slider">
+
+            <div  class="cont_text">
+<!-- <p>
+		На осуществление мероприятий и (или) оказание услуг в области защиты государственной тайны.
+</p> -->
+
+<div class="item">Лицензия на осуществление разработки, производства, испытания, установки, монтажа, технического обсаживания, ремонта, утилизации и реализации вооружения и военной техники (М 004437 ВВТ-О от 23 июля 2019г.)</div>
+  <div class="item">Лицензия на осуществление мероприятий и (или) оказание услуг в области защиты государственной тайны (ГТ 0106507 от 29 марта 2018г.)</div>
+  <div class="item">Лицензия на создание средств защиты информации, содержащей сведения, составляющие государственную тайну (ГТ 0106506 от 29 марта 2018г.)</div>
+
+            </div>
+
+
+
+                <div class="cont_btn" >
+                  <div class="left_btn" id="back"></div>
+                  <div class="right_btn" id="next"></div>                
+                </div>
+
+                <div style="display: inline-block; vertical-align:top; ">
+                <a href="licenses/index_2.html"><span style="color:#23B2E7;">Все лицензии</span></a>
+                </div>
+
+
+        </div>
+        <div class="bg_img_slider"></div>
+      </div>
+
+
+
+      <div id="service" class="title_item">
+
+        <div style="float:left;">
+        <h2>Услуги и решения</h2>
+        </div>
+
+        <div style="float:right;">
+        <a href="services/index.html"><span style="color:#23B2E7;">Подробнее</span></a>
+        </div>
+
+      </div>
+
+        <div class="service">
+          <h3>Информационные карточки диссертаций (ИКД)</h3></br></br>
+          <li>
+            Контроль и проверка правильности заполнения ИКД и оформления текста диссертации на соответствие ГОСТ Р 7.0.11-2011
+          </li></br>
+          <li>
+            Экспресс-регистрация
+          </li>
+          </br></br>
+          <h3>Испытательная лаборатория</h3></br></br>
+          <span  style="font-weight: 500;"><p>ИнтерЭВМ аккредитован в качестве испытательной лаборатории</p></span>
+          <p></br>
+            в Системе сертификации средств защиты информации по требованиям безопасности для сведений, составляющих государственную тайну, аттестат аккредитации № СЗИ.RU.ЛИ0118 от 12 сентября 2016 г. (бессрочный).
+            </br></br>
+            в Системе сертификации средств защиты информации по требованиям безопасности информации, аттестат аккредитации №290 от 19 сентября 2013 г. (действителен до 18 сентября 2018г.)
+            </br></br>
+            ИнтерЭВМ является специализированной организацией по проведению исследований средств криптографической защиты информации.
+          </p>
+        </div>
+		<div id="news"></div>
+
+        <div class="news">
+
+          <div class="title_item">
+
+            <div style="float:left;">
+            <h2>Новости</h2>
+            </div>
+
+            <div style="float:right;">
+            <a href="press-center/index.html"><span style="color:#23B2E7;">Все новости</span></a>
+            </div>
+
+          </div>
+
+
+              <div class="box_news effect">
+			<a href="press-center/news1.html">
+				<div class="img_news">
+				  <img src="design\img\img_news_1.png">
+				</div>
+			</a>
+			<div class="gradient"></div>
+            <div class="text_news">
+              <a href="press-center/news1.html"><h3>ИнтерЭВМ продолжает работы по созданию современных интеллектуальных информационных систем</h3></a></br>
+              
+			  <p>
+                Разрабатываемые технологии искусственного интеллекта позволят существенно повысить качество результатов 
+				на всех этапах интеллектуальной деятельности современных экспертов и операторов широкого спектра 
+				информационных систем.
+              </p>
+			  
+            </div>
+              </div>
+
+              <div class="box_news mr-l effect">
+			  
+			<a href="press-center/news2.html">
+				<div class="img_news">
+				  <img src="design\img\img_news_2.png">
+				</div>
+			</a>
+			<div class="gradient"></div>
+            <div class="text_news">
+              <a href="press-center/news2.html"><h3>Уникальная лаборатория (структурное подразделение ИнтерЭВМ) сертифицирована государственными органами.
+              </h3></a></br>
+              <p>
+                Сертифицирована государственными органами одна из уникальных в России лаборатория (структурное подразделение ИнтерЭВМ), 
+				применяющая технологию тестирования программных продуктов.
+
+
+              </p>
+            </div>
+              </div>
+
+              <div class="box_news mr-l effect">
+			  
+				<a href="press-center/news3.html">
+					<div class="img_news">
+					  <img src="design\img\img_news_3.png">
+					</div>
+				</a>
+			<div class="gradient"></div>
+            <div class="text_news">
+              <a href="press-center/news3.html"><h3>ИнтерЭВМ оказывает активное содействие и техническую поддержку НК СЭСЛА</h3></a></br>
+              <p>
+                Продолжается деятельность ИнтерЭВМ совместно с НК СЭСЛА по торгово-экономическому, 
+				научно-техническому и инновационному сотрудничеству, а также сотрудничеству 
+				в научно-образовательной сфере со странами Латинской Америки
+              </p>
+            </div>
+              </div>
+
+
+
+        </div>
+
+        <div class="contacts">
+
+          <div class="title_item">
+
+            <div style="float:left;">
+            <h2>Контакты</h2>
+            </div>
+
+          </div>
+
+          <div class="box_contacts">
+            <p>123557, Москва, Пресненский Вал, 19</p></br>
+
+            <table >
+
+              <tr>
+                <td width="200" valign="top">
+
+                  <p style="font-weight: 500;">Телефон канцелярии:</p>
+                  <p>+7 (495) 737-02-49</p>
+                  <p>+7 (499) 702-82-46</p>
+
+                </td>
+                <td width="200" valign="top">
+
+                  <p style="font-weight: 500;">Факс:</p>
+                  <p>+7 (495) 737-01-50</p>
+                  <p>+7 (499) 702-82-45</p>
+
+                </td >
+                <td width="90" >
+
+                </td>
+                <td valign="top">
+
+                  <p style="font-weight: 500;">Проезд:</p>
+                  <p>
+                    Станция метро "Белорусская" (кольцевая)  или
+                    "Улица 1905 года", далее автобусом № 12 или
+                     троллейбусами №18, № 54  от остановки
+                     "Большой Тишинский переулок"
+                   </p>
+
+                </td>
+              </tr>
+
+            </table>
+            <p><span style="font-weight: 500;">E-mail канцелярии:</span>  icie@inevm.ru</p></br>
+
+
+          </div>
+
+          <div class="map effect">
+            
+		      </div>
+
+
+        </div>
+
+
+
+</div>
+
+
+<footer class="footer_box" id="footer_box">
+<div class="content_footer">
+
+  <div class="addres_box">
+
+    <div class="logo_box_footer">
+      <img src="design\img\icie_logo.png" >
+    </div>
+
+    <div class="text_logo_footer">
+      <p>Интер<span style="font-weight: 500;">ЭВМ</span></br><span style="font-size:9px;">Международный центр</br> по информатике и электронике</span></p>
+    </div>
+
+    <div class="addres_text">
+
+        <p style="font-size:13px;">
+            123557, Москва, Пресненский Вал, 19</br></br>
+
+            <span style="font-weight: 500;">Телефон канцелярии:</span></br>
+            +7 (495) 737-02-49</br>
+            +7 (499) 702-82-46</br></br>
+
+            <span style="font-weight: 500;">Факс:</span></br>
+            +7 (495) 737-01-50</br>
+            +7 (499) 702-82-45</br></br>
+
+            E-mail канцелярии:   icie@inevm.ru
+        </p>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <div class="duble_menu">
+
+    <ul style="width:210px;">
+      <li><a href="about/history.html">История создания</a></li>
+      <li><a href="about/index.html">Направления деятельности</a></li>
+      <li><a href="about/leadership.html">Руководство</a></li>
+      <li><a href="about/science.html">Научно-педагогическая деятельность</a></li>
+      <li><a href="about/activity.html">Учредительные и внутренние документы</a></li>
+      <li><a href="about/contacts.html">Контакты</a></li>
+    </ul>
+
+    <ul class="padding-left" style="width:110px;">
+     <li><a href="licenses/index_2.html">Лицензии и сертификаты</a></li>
+      <li><a href="licenses/accred.html">Аккредитация</a></li>
+    </ul>
+
+    <ul class="padding-left" style="width:130px;">
+      <li><a href="services/index.html">Информационные карточки диссертаций (ИКД)</a></li>
+      <li><a href="services/lab.html">Испытательная лаборатория</a></li>
+    </ul>
+
+    <ul class="padding-left">
+      <li><a href="press-center/index.html">Новости</a></li>
+      <li><a href="press-center/events.html">События</a></li>
+    </ul>
+
+
+  </div>
+  <div class="copiright">Международный центр по информатике и электронике
+ 2019 © ИнтерЭВМ
+</div>
+</div>
+</footer>
+
+  </body>
+</html>
+
+<script src="design/js/popUp_and_whadow.js" async></script>
+
+<script src="design/js/slider_text.js" async></script>
+<script src="design/js/slider_main.js" async></script>
+
+<script type="text/javascript" >
+  
+        window.onload = function() {
+        var map = document.getElementsByClassName('map');
+        var iframe = "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.2508635793397!2d37.567949711103154!3d55.77151477140069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a2892f0b6ef%3A0x12f92ddbd55535f5!2z0JjQvdGC0LXRgNGN0LLQvCDQnNC10LbQtNGD0L3QsNGA0L7QtNC90YvQuSDQptC10L3RgtGAINCf0L4g0JjQvdGE0L7RgNC80LDRgtC40LrQtSDQmCDQrdC70LXQutGC0YDQvtC90LjQutC1!5e0!3m2!1sru!2sru!4v1567067655865!5m2!1sru!2sru' width='100%' height='505' frameborder='0' style='border:0;' allowfullscreen=''></iframe>"
+        map[0].innerHTML = iframe;
+        };
+
+</script>
