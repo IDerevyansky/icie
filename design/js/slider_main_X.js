@@ -130,19 +130,19 @@ class Slider{
 
 //Вызов метода по клику 
 slider 			   = new Slider();
-btnForward.onclick = function(){slider.forward()};
-btnRevers.onclick  = function(){slider.revers()};
+btnForward.onclick = () => slider.forward();
+btnRevers.onclick  = () => slider.revers();
 
 
 //Вызов метода по таймеру
 preloader_line     = document.getElementsByClassName('preloaderLine');
 ms 			       = 4000;
-preloader 	       = function(s){ preloader_line[0].style.animation ="progress "+s+"ms infinite ease-in-out"; };
-corusel 	       = function(param){ param == true?clearInterval(set):set = setInterval(() => { slider.forward(); }, ms); };
+preloader 	       = (s) => { preloader_line[0].style.animation ="progress "+s+"ms infinite ease-in-out"; };
+corusel 	       = (param) => { param == true?clearInterval(set):set = setInterval(() => { slider.forward(); }, ms); };
 
 preloader(ms); 
 corusel(false);
 
-mouseenter 	       = slider_main[0].addEventListener("mouseenter", function(){ corusel(true); preloader_line[0].style.display ="none"; }, false);
-mouseleave         = slider_main[0].addEventListener("mouseleave", function(){ corusel(false); preloader_line[0].style.display ="block"; }, false);
+mouseenter 	       = slider_main[0].addEventListener("mouseenter", () => { corusel(true); preloader_line[0].style.display ="none"; }, false);
+mouseleave         = slider_main[0].addEventListener("mouseleave", () => { corusel(false); preloader_line[0].style.display ="block"; }, false);
 
