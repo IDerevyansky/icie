@@ -7,37 +7,61 @@ var menu_box_nav = document.getElementsByClassName('menu_box_nav');
  //moreIcon[1].style.display='none'; 
 var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
+
+// mouseenter = slider_main[0].addEventListener("mouseenter", () => { }, false);
+// mouseleave = slider_main[0].addEventListener("mouseleave", () => { }, false);
+
 // -------------------
 
 var select_js = document.getElementsByClassName('select_js');
 var item_js = document.getElementsByClassName('item_js');
 
+for (let i = 0; i <= select_js.length; i++) {
+	
+	if(select_js[i] != undefined){
+		select_js[i].addEventListener( "mouseenter", () =>{opacity_item(i);} );
+	}
+}
 
-function opacity_item(q) {
-	pop_app(); 
+for (let i = 0; i < item_js.length; i++) {
+	item_js[i].addEventListener( "mouseenter", () =>{opacity_item(i+1);} );
+}
 
-	for ( let i=0; i <= item_js.length; i++ ) {
 
+
+
+var opacity_item = (q) => {
+	pop_app();
 	
 
+	
+	
+
+
+	for (let i = 0; i <= item_js.length; i++) {
+
+
 		if(q == i){
-			//console.log('border '+i);
-			select_js[i].style.borderBottom="2px solid rgb(79, 193, 236, 1)";
+			select_js[i].style.borderBottom="2px solid #23B2E7";
 		}else{
-			select_js[i].style.borderBottom="0px solid rgb(79, 193, 236, 0)";
+			select_js[i].style.borderBottom="0px solid #23B2E7";
 		}
 
+
 		if(item_js[i] != undefined){
+
 			if(q == 0){ 
-				item_js[i].style.opacity='1';  
+				item_js[i].style.opacity="1"; 
 			}else if(q == i+1){
-		 		item_js[i].style.opacity='1'; 
+		 		item_js[i].style.opacity="1"; 
 			}else{
-				item_js[i].style.opacity='0.5';
+				item_js[i].style.opacity="0.5";	
 			}
 			
 		}
 		
+
+	
 
 
 	}
@@ -101,28 +125,11 @@ function openPopUp(){
 }
 
 
-
+// moreIcon[0].addEventListener("click", pop_app, false); 
+// moreIcon[1].addEventListener("click", pop_app, false);
 pop_app_menu_box[0].addEventListener("click", closePopUp, false); 
+pop_app_menu[0].addEventListener("click", openPopUp, false);
 window.addEventListener("scroll", offset, false);
 pop_app_menu[0].addEventListener("mouseleave", closePopUp, false);
-
-
-
-	
-for (let i = 0; i <= select_js.length; i++) {
-	
-	if(select_js[i] != undefined){
-	  select_js[i].addEventListener("mouseenter", function(){opacity_item(i)}, false);
-	}
-
-}
-
-for (let i = 0; i < item_js.length; i++) {
-
-	item_js[i].addEventListener("mouseenter", function(){opacity_item(i+1)}, false);
-
-}
-
-
 
 

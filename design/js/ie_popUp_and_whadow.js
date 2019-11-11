@@ -13,10 +13,35 @@ var select_js = document.getElementsByClassName('select_js');
 var item_js = document.getElementsByClassName('item_js');
 
 
+
+	
+for (var i = 0; i <= select_js.length; i++) {
+	
+	if(select_js[i] != undefined){	
+			select_js[i].addEventListener("mouseenter", function(){opacity_item(i)}, false);
+		}
+	  
+	}
+
+
+for (var i = 0; i < item_js.length; i++) {
+
+	item_js[i].addEventListener("mouseenter", function(){opacity_item(i+1)}, false);
+
+}
+
+
+
+
+
+
+
 function opacity_item(q) {
 	pop_app(); 
 
-	for ( let i=0; i <= item_js.length; i++ ) {
+	console.log(q);	
+
+	for ( var i=0; i <= item_js.length; i++ ) {
 
 	
 
@@ -105,24 +130,6 @@ function openPopUp(){
 pop_app_menu_box[0].addEventListener("click", closePopUp, false); 
 window.addEventListener("scroll", offset, false);
 pop_app_menu[0].addEventListener("mouseleave", closePopUp, false);
-
-
-
-	
-for (let i = 0; i <= select_js.length; i++) {
-	
-	if(select_js[i] != undefined){
-	  select_js[i].addEventListener("mouseenter", function(){opacity_item(i)}, false);
-	}
-
-}
-
-for (let i = 0; i < item_js.length; i++) {
-
-	item_js[i].addEventListener("mouseenter", function(){opacity_item(i+1)}, false);
-
-}
-
 
 
 

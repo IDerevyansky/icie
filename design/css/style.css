@@ -15,6 +15,9 @@ html{
 	font-size:16px;
 }
 
+img{
+	border:0px;
+}
 
 a{
 	text-decoration: none !important;
@@ -541,7 +544,7 @@ padding:20px;
 	/*width:95%;*/
 	height:5px;
 	border-radius:50px;
-	background-color: #ffffff8f;
+	background-color: rgba(255, 255, 255, 0.56);
 	position:absolute;
 	z-index:999;
 	margin-top:285px;
@@ -555,6 +558,8 @@ padding:20px;
 	90%{opacity: 1;}
 	to {opacity: 0; width:95%;}
 }
+
+
 
 .bk_sep{
 	padding:0px 12px 0px 12px;
@@ -594,5 +599,6 @@ padding:20px;
 
 
 .uk-lightbox{
-	background: #00000087 !important;
+	/*background-color: #00000087 !important;*/
+	background-color: rgba(0,0,0,0.5) !important;
 }

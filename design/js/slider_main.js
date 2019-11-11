@@ -39,21 +39,15 @@ scale       = 1;
 		scale_memory.reverse();
 		translate_memory.reverse();
 
-
-
-class Slider{
-
 	
-	
-	
-		forward(){
+		function forward(){
 
 		
-		function splice_push(q){
-			del = q.splice(0,1);
-			push = q.push(del);
-			return push;
-		}
+			function splice_push(q){
+				del = q.splice(0,1);
+				push = q.push(del);
+				return push;
+			}
 
 		splice_push(step);
 		splice_push(scale_memory);
@@ -86,16 +80,16 @@ class Slider{
 	
 	 
 			
-		}
+		};
 
 
-		revers(){
+		function revers(){
 
-		function splice_unshift(q){
-			del  = q.splice(len,1);
-			push = q.unshift(del);
-			return push;
-		}
+			function splice_unshift(q){
+				del  = q.splice(len,1);
+				push = q.unshift(del);
+				return push;
+			}
 
 		splice_unshift(step);
 		splice_unshift(scale_memory);
@@ -120,25 +114,25 @@ class Slider{
 
 
 			
-		}
+		};
 
 
 
-}
+
 
 
 
 //Вызов метода по клику 
-slider 			   = new Slider();
-btnForward.onclick = function(){slider.forward()};
-btnRevers.onclick  = function(){slider.revers()};
+
+btnForward.addEventListener("click", function(){forward();}, false);
+btnRevers.addEventListener("click", function(){revers();}, false);
 
 
 //Вызов метода по таймеру
 preloader_line     = document.getElementsByClassName('preloaderLine');
 ms 			       = 4000;
 preloader 	       = function(s){ preloader_line[0].style.animation ="progress "+s+"ms infinite ease-in-out"; };
-corusel 	       = function(param){ param == true?clearInterval(set):set = setInterval(() => { slider.forward(); }, ms); };
+corusel 	       = function(param){ param == true?clearInterval(set):set = setInterval(function(){ forward(); }, ms); };
 
 preloader(ms); 
 corusel(false);
