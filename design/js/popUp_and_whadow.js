@@ -16,15 +16,17 @@ var item_js = document.getElementsByClassName('item_js');
 function opacity_item(q) {
 	pop_app(); 
 
-	for ( let i=0; i <= item_js.length; i++ ) {
+	console.log(q);	
 
-	
+	for ( var i=0; i <= item_js.length; i++ ) {
+
+	(function(i){
 
 		if(q == i){
 			//console.log('border '+i);
-			select_js[i].style.borderBottom="2px solid rgb(79, 193, 236, 1)";
+			select_js[i].style.borderBottom="2px solid rgba(79, 193, 236, 1)";
 		}else{
-			select_js[i].style.borderBottom="0px solid rgb(79, 193, 236, 0)";
+			select_js[i].style.borderBottom="0px solid rgba(79, 193, 236, 0)";
 		}
 
 		if(item_js[i] != undefined){
@@ -37,9 +39,10 @@ function opacity_item(q) {
 			}
 			
 		}
+
+	})(i);
+
 		
-
-
 	}
 
 
@@ -109,18 +112,23 @@ pop_app_menu[0].addEventListener("mouseleave", closePopUp, false);
 
 
 	
-for (let i = 0; i <= select_js.length; i++) {
+for (var i = 0; i <= select_js.length; i++) {
 	
-	if(select_js[i] != undefined){
-	  select_js[i].addEventListener("mouseenter", function(){opacity_item(i)}, false);
-	}
+	(function(i){
+		if(select_js[i] != undefined){
+	  	select_js[i].addEventListener("mouseenter", function(){opacity_item(i)}, false);
+		}
+	})(i);
+	
 
 }
 
-for (let i = 0; i < item_js.length; i++) {
-
-	item_js[i].addEventListener("mouseenter", function(){opacity_item(i+1)}, false);
-
+for (var i = 0; i < item_js.length; i++) {
+	
+	(function(i){
+		item_js[i].addEventListener("mouseenter", function(){opacity_item(i+1)}, false);
+	})(i);
+	
 }
 
 

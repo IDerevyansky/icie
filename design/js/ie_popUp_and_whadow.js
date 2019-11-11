@@ -12,16 +12,19 @@ var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 var select_js = document.getElementsByClassName('select_js');
 var item_js = document.getElementsByClassName('item_js');
 
-
-
 	
 for (var i = 0; i <= select_js.length; i++) {
 	
-	if(select_js[i] != undefined){	
-			select_js[i].addEventListener("mouseenter", function(){opacity_item(i)}, false);
-		}
-	  
+	(function(i){
+
+		if(select_js[i] != undefined)
+	{	
+		select_js[i].addEventListener("mouseenter", function(){opacity_item(i)}, false);
 	}
+
+	})(i);
+
+}
 
 
 for (var i = 0; i < item_js.length; i++) {
